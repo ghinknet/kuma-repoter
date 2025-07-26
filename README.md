@@ -14,7 +14,7 @@ cd services
 mkdir kuma-reporter
 cd kuma-reporter
 apt install wget -y
-wget -O main https://github.com/ghinknet/kuma-repoter/releases/download/v1.0.0/linux-amd64
+wget -O main https://github.com/ghinknet/kuma-repoter/releases/download/v1.0.0/kuma-reporter-linux-amd64
 wget -O config.json https://github.com/ghinknet/kuma-repoter/releases/download/v1.0.0/config.json
 chmod +x main
 cd
@@ -27,7 +27,7 @@ cd services
 mkdir kuma-reporter
 cd kuma-reporter
 apt install wget -y
-wget -O main https://git.ghink.net/ghink/kuma-repoter/releases/download/v1.0.0/linux-amd64
+wget -O main https://git.ghink.net/ghink/kuma-repoter/releases/download/v1.0.0/kuma-reporter-linux-amd64
 wget -O config.json https://git.ghink.net/ghink/kuma-repoter/releases/download/v1.0.0/config.json
 chmod +x main
 cd
