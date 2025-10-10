@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-var Logger func(string, ...interface{})
+var Logger func(string, ...any)
 
 func Daemon(ctx context.Context, cfg model.Config) {
 	Logger = DefaultLogger

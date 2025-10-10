@@ -17,5 +17,5 @@ type Config struct {
 	UseIPv4       bool
 	UseIPv6       bool
 	UseSystemPing bool
-	Logger        func(string, ...interface{})
+	Logger        func(string, ...any)
 }

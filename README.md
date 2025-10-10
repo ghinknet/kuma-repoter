@@ -68,6 +68,35 @@ systemctl start kuma-reporter
 systemctl enable kuma-reporter
 ```
 
+### Usage as Lib Example
+
+1. Get kuma-repoter
+```
+go get git.ghink.net/ghink/kuma-repoter
+```
+
+2. Start the daemon
+```
+func InitKuma() {
+	kumaConfig := kumaRepoter.Config{
+		ReportURL:     config.C.GetString("uptime.kuma.report_url"),
+		PingHost:      config.C.GetString("uptime.kuma.ping_host"),
+		ReportPeriod:  time.Duration(config.C.GetInt("uptime.kuma.report_period_seconds")) * time.Second,
+		MaxRetries:    config.C.GetInt("uptime.kuma.max_retries"),
+		RetryDelay:    time.Duration(config.C.GetInt("uptime.kuma.retry_delay_seconds")) * time.Second,
+		PingCount:     config.C.GetInt("uptime.kuma.ping_count"),
+		PingTimeout:   time.Duration(config.C.GetInt("uptime.kuma.ping_timeout_seconds")) * time.Second,
+		HTTPTimeout:   time.Duration(config.C.GetInt("uptime.kuma.http_timeout_seconds")) * time.Second,
+		StatusMessage: config.C.GetString("uptime.kuma.status_message"),
+		UseIPv4:       config.C.GetBool("uptime.kuma.use_ipv4"),
+		UseIPv6:       config.C.GetBool("uptime.kuma.use_ipv6"),
+		UseSystemPing: config.C.GetBool("uptime.kuma.use_system_ping"),
+	}
+
+	go kumaRepoter.Daemon(context.Background(), kumaConfig)
+}
+```
+
 ### Support Platforms
 
  - aix-ppc64
