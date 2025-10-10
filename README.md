@@ -2,6 +2,10 @@
 
 Report status to uptime kuma
 
+Why "repoter"? ...hummm, it's just a typo at first.
+
+But I decided to keep it. :D
+
 ### Usage Example
 
 1. Download a binary executable file in release for your architecture and system
