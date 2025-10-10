@@ -4,10 +4,11 @@
   "max_retries": 3,
   "retry_delay_seconds": 5,
   "ping_count": 4,
+  "ping_host": "",
   "ping_timeout_seconds": 10,
   "http_timeout_seconds": 15,
   "status_message": "OK",
   "use_ipv4": true,
   "use_ipv6": false,
-  "use_system_ping": true
+  "use_system_ping": false
 }
